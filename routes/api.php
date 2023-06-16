@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\OpenAIController;
+use App\Http\Controllers\SocialLoginController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('open-ai', [OpenAIController::class, 'index']);
+Route::post('signup',[SocialLoginController::class,'signup']);

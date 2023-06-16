@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\OpenAIController;
+use App\Http\Controllers\SocialLoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,4 +18,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('open-ai', [OpenAIController::class, 'index']);
+Route::get('open-ai', [OpenAIController::class, 'chat']);
