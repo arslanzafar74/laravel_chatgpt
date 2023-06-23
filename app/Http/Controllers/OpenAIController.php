@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Http;
 
 class OpenAIController extends Controller
 {
+
   public function index(Request $request)
   {
     $search = $request->message;

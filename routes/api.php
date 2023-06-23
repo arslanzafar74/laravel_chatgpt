@@ -19,5 +19,5 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('open-ai', [OpenAIController::class, 'index']);
+Route::get('open-ai', [OpenAIController::class, 'index'])->middleware('auth:sanctum');
 Route::post('signup',[SocialLoginController::class,'signup']);
